@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 // Sample Masonry Grid Component
@@ -15,21 +14,6 @@ const MasonryGrid = () => {
       alt: "man",
     },
     {
-      id: "huh yujin",
-      src: "https://i.pinimg.com/474x/0d/a3/9f/0da39fe11b6ed005238cb0cd0ddf2d4f.jpg",
-      alt: "women",
-    },
-    {
-      id: "rose",
-      src: "https://i.pinimg.com/474x/14/ad/9c/14ad9cf661c0b19d73d968773bfbccb6.jpg",
-      alt: "women",
-    },
-    {
-      id: "kim chaeyon",
-      src: "https://i.pinimg.com/236x/40/da/51/40da51c416e826cf8e4821fd9e46762e.jpg",
-      alt: "women",
-    },
-    {
       id: "man Vanda",
       src: "https://i.pinimg.com/236x/1e/11/3a/1e113a912572c0cf3be0be77a19dcf10.jpg",
       alt: "man",
@@ -37,17 +21,7 @@ const MasonryGrid = () => {
     {
       id: "man-1",
       src: "https://i.pinimg.com/236x/dd/a5/e9/dda5e999ea82429e4cf78d96ff3c56e1.jpg",
-      alt: "man",
-    },
-    {
-      id: "kazuha",
-      src: "https://i.pinimg.com/236x/66/68/e4/6668e4679870ecac7b51908bd07994c5.jpg",
-      alt: "women",
-    },
-    {
-      id: "women-1",
-      src: "https://i.pinimg.com/474x/66/f5/b8/66f5b8f75568921855bb0acc8fdebfd4.jpg",
-      alt: "women",
+      alt: "man ",
     },
     {
       id: "man-2",
@@ -60,16 +34,6 @@ const MasonryGrid = () => {
       alt: "man",
     },
     {
-      id: "women-2",
-      src: "https://i.pinimg.com/474x/02/67/8b/02678b167b977588ee816ac90224bc87.jpg",
-      alt: "women",
-    },
-    {
-      id: "women-3",
-      src: "https://i.pinimg.com/236x/4d/61/23/4d612311494998910f3f9789ad6834a2.jpg",
-      alt: "women",
-    },
-    {
       id: "man-4",
       src: "https://i.pinimg.com/736x/42/e9/22/42e922ee49236a84af2158cb13ea186e.jpg",
       alt: "man",
@@ -80,34 +44,9 @@ const MasonryGrid = () => {
       alt: "man",
     },
     {
-      id: "women-4",
-      src: "https://i.pinimg.com/474x/30/c0/88/30c0887e5c067354dd8f1742e2e6a5ae.jpg",
-      alt: "women",
-    },
-    {
-      id: "women-5",
-      src: "https://i.pinimg.com/236x/2c/0b/f8/2c0bf83ac0e4407e4c6b0d7757209446.jpg",
-      alt: "women",
-    },
-    {
       id: "man-6",
       src: "https://i.pinimg.com/474x/4c/d9/5f/4cd95f77464a9319cc2de4aed5ab05aa.jpg",
       alt: "man",
-    },
-    {
-      id: "women-6",
-      src: "https://i.pinimg.com/236x/f9/aa/93/f9aa936cc712760dacdcd7fc02163766.jpg",
-      alt: "women",
-    },
-    {
-      id: "man-7",
-      src: "https://i.pinimg.com/236x/ce/ba/e4/cebae4d8b3554baf9569ba20f0c5e882.jpg",
-      alt: "man",
-    },
-    {
-      id: "women-7",
-      src: "https://i.pinimg.com/236x/df/b6/2b/dfb62b3832b3d4d187b53f9e7bfba952.jpg",
-      alt: "women",
     },
   ];
 
@@ -123,7 +62,7 @@ const MasonryGrid = () => {
               loading="lazy"
             />
             <div className="absolute bottom-0 w-full flex justify-center p-2 bg-transparent rounded-b-lg hover:bg-opacity-60 hover:bg-black">
-              <button className="text-white bg-transparent px-3 py-1 rounded-lg">
+              <button className="text-white bg-transparentpx-3 py-1 rounded-lg">
                 View Profile
               </button>
             </div>
@@ -137,7 +76,6 @@ const MasonryGrid = () => {
 const Page = () => {
   return (
     <div>
-      {/* Navbar */}
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -162,80 +100,89 @@ const Page = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link href="/">Home</Link>
+                <a>Home</a>
               </li>
               <li>
-                <details>
-                  <summary>Gender</summary>
-                  <ul className="p-2">
-                    <li>
-                      <Link href="/women">Women</Link>
-                    </li>
-                    <li>
-                      <Link href="/men">Men</Link>
-                    </li>
-                  </ul>
-                </details>
+                <a>Gender</a>
+                <ul className="p-2">
+                  <li>
+                    <a>Women</a>
+                  </li>
+                  <li>
+                    <a>Men</a>
+                  </li>
+                </ul>
               </li>
               <li>
-                <Link href="/soulmate">Soulmate</Link>
+                <a>Soulmate</a>
               </li>
               <li>
-                <Link href="/profile">Profile</Link>
+                <a>Profile</a>
               </li>
+
               <li>
-                <Link href="/account/log-in">LogIn</Link>
+                <a>Account</a>
+                <ul className="p-2">
+                  <li>
+                    <a>LogIn</a>
+                  </li>
+                  <li>
+                    <a>Sign Up</a>
+                  </li>
+                </ul>
               </li>
+
               <li>
-                <details>
-                  <summary>Contact Us</summary>
-                  <ul className="p-2">
-                    <li>
-                      <Link href="https://facebook.com">Facebook</Link>
-                    </li>
-                    <li>
-                      <Link href="https://instagram.com">Instagram</Link>
-                    </li>
-                  </ul>
-                </details>
+                <a>Contact Us</a>
+                <ul className="p-2">
+                  <li>
+                    <a>Facebook</a>
+                  </li>
+                  <li>
+                    <a>Instagram</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
-          <Link href="/" className="btn btn-ghost text-xl flex text-pink-500">Truewhirl</Link>
+          <a className="btn btn-ghost text-xl  flex text-pink-500 ">
+            Truewhirl
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href="/" className="mx-7">Home</Link>
+              <a className="mx-7">Home</a>
             </li>
             <li>
               <details>
                 <summary className="mx-7">Gender</summary>
                 <ul className="p-2">
                   <li>
-                    <Link href="/women">Women</Link>
+                    <a>Women</a>
                   </li>
                   <li>
-                    <Link href="/men">Men</Link>
+                    <a>Men</a>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <Link href="/soulmate" className="mx-7">Soulmate</Link>
+              <a className="mx-7">Soulmate</a>
             </li>
             <li>
-              <Link href="/profile" className="mx-7">Profile</Link>
+              <a className="mx-7">Profile</a>
+
             </li>
             <li>
               <details>
                 <summary className="mx-7">Account</summary>
                 <ul className="p-2">
                   <li>
-                    <Link href="/account/log-in">Login</Link>
+                    <a>Login</a>
                   </li>
                   <li>
-                    <Link href="/account/sign-up">Sign Up</Link>
+                    <a>Sign Up</a>
                   </li>
                 </ul>
               </details>
@@ -245,14 +192,16 @@ const Page = () => {
                 <summary className="mx-7">Contact Us</summary>
                 <ul className="p-2">
                   <li>
-                    <Link href="https://facebook.com">Facebook</Link>
+                    <a>Facebook</a>
                   </li>
                   <li>
-                    <Link href="https://instagram.com">Instagram</Link>
+                    <a>Instagram</a>
                   </li>
                 </ul>
               </details>
             </li>
+
+
           </ul>
         </div>
         <div className="navbar-end flex items-center gap-4">
@@ -279,59 +228,56 @@ const Page = () => {
         </div>
       </div>
 
-      {/* Buttons Section */}
-      <div className="p-4">
-        <button className="btn btn-info bg-base-100 mr-2 ml-4 hover:text-white">
-          Coffee
-        </button>
-        <button className="btn btn-success bg-base-100 m-2 hover:text-white">
-          Library
-        </button>
-        <button className="btn btn-warning bg-base-100 m-2 hover:text-white">
-          Dinner
-        </button>
-        <button className="btn btn-error bg-base-100 m-2 hover:text-white">
-          Movie
-        </button>
-        <button className="btn btn-active bg-base-100 m-2 hover:text-white">
-          Hangout
-        </button>
-        <button className="btn btn-active btn-neutral bg-base-100 m-2 text-black hover:text-white">
-          Travelling
-        </button>
-        <button className="btn btn-active btn-primary bg-base-100 m-2 text-black hover:text-white">
-          Camping
-        </button>
-        <button className="btn btn-active btn-secondary bg-base-100 m-2 text-black hover:text-white">
-          Outdoor
-        </button>
-      </div>
+      <button className="btn btn-info bg-base-100 mr-2 ml-4 hover:text-white">
+        Coffee
+      </button>
+      <button className="btn btn-success bg-base-100 m-2 hover:text-white">
+        Library
+      </button>
+      <button className="btn btn-warning bg-base-100 m-2 hover:text-white">
+        Dinner
+      </button>
+      <button className="btn btn-error bg-base-100 m-2 hover:text-white">
+        Movie
+      </button>
+      <button className="btn btn-active bg-base-100 m-2 hover:text-white">
+        Hangout
+      </button>
+      <button className="btn btn-active btn-neutral bg-base-100 m-2 text-black hover:text-white">
+        Travelling
+      </button>
+      <button className="btn btn-active btn-primary bg-base-100 m-2 text-black hover:text-white">
+        Camping
+      </button>
+      <button className="btn btn-active btn-secondary bg-base-100 m-2 text-black hover:text-white">
+        Outdoor
+      </button>
 
       {/* Masonry Grid Section */}
       <MasonryGrid />
 
-      {/* Footer Section */}
-      <footer className="footer bg-neutral text-neutral-content p-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <footer className="footer bg-neutral text-neutral-content p-20">
           <nav>
             <h6 className="footer-title">Contact us</h6>
-            <Link href="https://facebook.com" className="link link-hover">Facebook</Link>
-            <Link href="https://instagram.com" className="link link-hover">Instagram</Link>
-            <Link href="https://tiktok.com" className="link link-hover">TikTok</Link>
-            <Link href="mailto:example@example.com" className="link link-hover">Email</Link>
+            <a className="link link-hover">Facebook</a>
+            <a className="link link-hover">Instagram</a>
+            <a className="link link-hover">TikTok</a>
+            <a className="link link-hover">Email</a>
           </nav>
           <nav>
             <h6 className="footer-title">Company</h6>
-            <Link href="/about" className="link link-hover">About us</Link>
-            <Link href="/terms" className="link link-hover">Terms and Conditions</Link>
+            <a className="link link-hover">About us</a>
+            <a className="link link-hover">Term and Condition</a>
           </nav>
           <nav>
-            <h6 className="footer-title">Legal</h6>
-            <Link href="/privacy" className="link link-hover">Privacy Policy</Link>
-            <Link href="/cookies" className="link link-hover">Cookie Policy</Link>
+            <h6 className="footer-title">We Accept</h6>
+            <a className="link link-hover">ABA bank</a>
+            <a className="link link-hover">Acelida</a>
+            <a className="link link-hover">KH QR</a>
           </nav>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };
